@@ -1,14 +1,15 @@
 {
-    "Appointment Confirmed": {
-        "description": "Confirms the customer's NBN® appointment details including site address, ID, and timeslot.",
-        "zohoTemplateId": "6064528000037661003",
-        "requiredFields": [
-            "firstname",
-            "siteAddress",
-            "nbnAppointmentID",
-            "nbnAppointmentStartTime",
-            "nbnAppointmentEndTime"
-        ]
+  "Appointment Confirmed": {
+    "subjectPattern": "Your NBN appointment is confirmed",
+    "description": "Confirms the customer's NBN® appointment details including site address, ID, and timeslot.",
+    "zohoTemplateId": "6064528000037661003",
+    "requiredFields": [
+      "firstname",
+      "siteAddress",
+      "nbnAppointmentID",
+      "nbnAppointmentStartTime",
+      "nbnAppointmentEndTime"
+    ]
     },
     "Appointment Changed": {
         "description": "Advises customer that appointment date/time has changed.",
