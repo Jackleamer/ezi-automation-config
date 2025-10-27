@@ -1,66 +1,99 @@
 {
-  "NBN Appointment Confirmed": {
-    "description": "Confirms the customer's NBN® appointment details including site address, ID, and timeslot.",
-    "zohoTemplateId": "6064528000037661003",
-    "requiredFields": [
-      "firstname",
-      "siteAddress",
-      "nbnAppointmentID",
-      "nbnAppointmentStartTime",
-      "nbnAppointmentEndTime"
-  },
-  "Appointment Changed": {
-    "description": "Advises customer that appointment date/time has changed.",
-    "requiredFields": ["old_date", "old_time", "new_date", "new_time", "address"],
-    "zohoTemplateId": "EZI_APPT_CHANGED",
-    "parser": "parseAppointmentChanged"
-  },
-  "Appointment Required": {
-    "description": "Customer needs to schedule an NBN appointment.",
-    "requiredFields": ["address", "booking_link"],
-    "zohoTemplateId": "EZI_APPT_REQUIRED",
-    "parser": "parseAppointmentRequired"
-  },
-  "NBN Activation Completed": {
-    "description": "Confirms that the NBN service is active and ready to use.",
-    "requiredFields": ["activation_date", "technology_type", "plan_name"],
-    "zohoTemplateId": "EZI_ACTIVATION_COMPLETED",
-    "parser": "parseActivationCompleted"
-  },
-  "Order On Hold": {
-    "description": "Informs customer that their order has been paused due to a hold reason.",
-    "requiredFields": ["hold_reason", "next_steps"],
-    "zohoTemplateId": "EZI_ORDER_ON_HOLD",
-    "parser": "parseOrderOnHold"
-  },
-  "Order Rejected": {
-    "description": "Notifies customer that their NBN order was rejected by the wholesaler.",
-    "requiredFields": ["reject_reason", "support_contact"],
-    "zohoTemplateId": "EZI_ORDER_REJECTED",
-    "parser": "parseOrderRejected"
-  },
-  "Order Completed": {
-    "description": "Confirms the order provisioning process has finished successfully.",
-    "requiredFields": ["completion_date", "plan_name"],
-    "zohoTemplateId": "EZI_ORDER_COMPLETED",
-    "parser": "parseOrderCompleted"
-  },
-  "Order Cancelled": {
-    "description": "Notifies customer that their order has been cancelled.",
-    "requiredFields": ["cancel_reason", "support_contact"],
-    "zohoTemplateId": "EZI_ORDER_CANCELLED",
-    "parser": "parseOrderCancelled"
-  },
-  "Change of Ownership Completed": {
-    "description": "Confirms that service ownership has been successfully transferred.",
-    "requiredFields": ["old_name", "new_name", "address"],
-    "zohoTemplateId": "EZI_CHANGE_OWNERSHIP",
-    "parser": "parseChangeOwnership"
-  },
-  "NBN Port Out Completed": {
-    "description": "Confirms that the customer's number has been successfully ported out.",
-    "requiredFields": ["phone_number", "port_date"],
-    "zohoTemplateId": "EZI_PORT_OUT",
-    "parser": "parsePortOutCompleted"
-  }
+    "NBN Appointment Confirmed": {
+        "description": "Confirms the customer's NBN® appointment details including site address, ID, and timeslot.",
+        "zohoTemplateId": "6064528000037661003",
+        "requiredFields": [
+            "firstname",
+            "siteAddress",
+            "nbnAppointmentID",
+            "nbnAppointmentStartTime",
+            "nbnAppointmentEndTime"
+        ]
+    },
+    "Appointment Changed": {
+        "description": "Advises customer that appointment date/time has changed.",
+        "requiredFields": [
+            "old_date",
+            "old_time",
+            "new_date",
+            "new_time",
+            "address"
+        ],
+        "zohoTemplateId": "EZI_APPT_CHANGED",
+        "parser": "parseAppointmentChanged"
+    },
+    "Appointment Required": {
+        "description": "Customer needs to schedule an NBN appointment.",
+        "requiredFields": [
+            "address",
+            "booking_link"
+        ],
+        "zohoTemplateId": "EZI_APPT_REQUIRED",
+        "parser": "parseAppointmentRequired"
+    },
+    "NBN Activation Completed": {
+        "description": "Confirms that the NBN service is active and ready to use.",
+        "requiredFields": [
+            "activation_date",
+            "technology_type",
+            "plan_name"
+        ],
+        "zohoTemplateId": "EZI_ACTIVATION_COMPLETED",
+        "parser": "parseActivationCompleted"
+    },
+    "Order On Hold": {
+        "description": "Informs customer that their order has been paused due to a hold reason.",
+        "requiredFields": [
+            "hold_reason",
+            "next_steps"
+        ],
+        "zohoTemplateId": "EZI_ORDER_ON_HOLD",
+        "parser": "parseOrderOnHold"
+    },
+    "Order Rejected": {
+        "description": "Notifies customer that their NBN order was rejected by the wholesaler.",
+        "requiredFields": [
+            "reject_reason",
+            "support_contact"
+        ],
+        "zohoTemplateId": "EZI_ORDER_REJECTED",
+        "parser": "parseOrderRejected"
+    },
+    "Order Completed": {
+        "description": "Confirms the order provisioning process has finished successfully.",
+        "requiredFields": [
+            "completion_date",
+            "plan_name"
+        ],
+        "zohoTemplateId": "EZI_ORDER_COMPLETED",
+        "parser": "parseOrderCompleted"
+    },
+    "Order Cancelled": {
+        "description": "Notifies customer that their order has been cancelled.",
+        "requiredFields": [
+            "cancel_reason",
+            "support_contact"
+        ],
+        "zohoTemplateId": "EZI_ORDER_CANCELLED",
+        "parser": "parseOrderCancelled"
+    },
+    "Change of Ownership Completed": {
+        "description": "Confirms that service ownership has been successfully transferred.",
+        "requiredFields": [
+            "old_name",
+            "new_name",
+            "address"
+        ],
+        "zohoTemplateId": "EZI_CHANGE_OWNERSHIP",
+        "parser": "parseChangeOwnership"
+    },
+    "NBN Port Out Completed": {
+        "description": "Confirms that the customer's number has been successfully ported out.",
+        "requiredFields": [
+            "phone_number",
+            "port_date"
+        ],
+        "zohoTemplateId": "EZI_PORT_OUT",
+        "parser": "parsePortOutCompleted"
+    }
 }
