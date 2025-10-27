@@ -8,7 +8,7 @@
             "nbnAppointmentID",
             "nbnAppointmentStartTime",
             "nbnAppointmentEndTime"
-        ]
+        ],
     },
     "Appointment Changed": {
         "description": "Advises customer that appointment date/time has changed.",
