@@ -1,9 +1,12 @@
 {
-  "Appointment Confirmed": {
-    "description": "Confirms NBN appointment date and time.",
-    "requiredFields": ["appointment_date", "appointment_time", "address", "technology_type"],
-    "zohoTemplateId": "EZI_APPT_CONFIRMED",
-    "parser": "parseAppointmentConfirmed"
+  "NBN Appointment Confirmed": {
+    "description": "Confirms the customer's NBN® appointment details including site address, ID, and timeslot.",
+    "requiredFields": [
+      "firstname",
+      "siteAddress",
+      "nbnAppointmentID",
+      "nbnAppointmentStartTime",
+      "nbnAppointmentEndTime"
   },
   "Appointment Changed": {
     "description": "Advises customer that appointment date/time has changed.",
