@@ -1,5 +1,5 @@
 {
-    "NBN Appointment Confirmed": {
+    "Appointment Confirmed": {
         "description": "Confirms the customer's NBN® appointment details including site address, ID, and timeslot.",
         "zohoTemplateId": "6064528000037661003",
         "requiredFields": [
