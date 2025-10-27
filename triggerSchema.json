@@ -2,7 +2,6 @@
   "Appointment Confirmed": {
     "subjectPattern": "Your NBN appointment is confirmed",
     "description": "Confirms the customer's NBN® appointment details including site address, ID, and timeslot.",
-    "parser": "parseAppointmentConfirmed",
     "zohoTemplateId": "6064528000037661003",
     "requiredFields": [
       "firstname",
