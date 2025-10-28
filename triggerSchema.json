@@ -14,11 +14,11 @@
     "Appointment Changed": {
         "description": "Advises customer that appointment date/time has changed.",
         "requiredFields": [
-            "old_date",
-            "old_time",
-            "new_date",
-            "new_time",
-            "address"
+      "firstname",
+      "siteAddress",
+      "nbnAppointmentID",
+      "nbnAppointmentStartTime",
+      "nbnAppointmentEndTime"
         ],
         "zohoTemplateId": "EZI_APPT_CHANGED",
         "parser": "parseAppointmentChanged"
