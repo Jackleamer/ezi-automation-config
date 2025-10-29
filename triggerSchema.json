@@ -1,100 +1,205 @@
 {
-  "Appointment Confirmed": {
+  "Order - Appointment (NBN) Confirmed": {
     "subjectPattern": "Your NBN appointment is confirmed",
-    "description": "Confirms the customer's NBN® appointment details including site address, ID, and timeslot.",
+    "description": "Confirms the customer's NBN appointment details including site address, ID, and timeslot.",
     "zohoTemplateId": "6064528000037661003",
     "requiredFields": [
+      "accountID",
       "firstname",
       "siteAddress",
       "nbnAppointmentID",
       "nbnAppointmentStartTime",
       "nbnAppointmentEndTime"
     ]
-    },
-    "Appointment Changed": {
-        "description": "Advises customer that appointment date/time has changed.",
-        "requiredFields": [
+  },
+  "Order - Appointment (NBN) Changed": {
+    "subjectPattern": "Your NBN appointment has been changed",
+    "description": "Notifies the customer that their NBN appointment details have been updated.",
+    "zohoTemplateId": "6064528000037902030",
+    "requiredFields": [
+      "accountID",
       "firstname",
       "siteAddress",
       "nbnAppointmentID",
       "nbnAppointmentStartTime",
       "nbnAppointmentEndTime"
-        ],
-        "zohoTemplateId": "EZI_APPT_CHANGED",
-        "parser": "parseAppointmentChanged"
+    ]
+  },
+  "Order - New Appointment (NBN) Required": {
+    "subjectPattern": "Action required: Book a new NBN appointment",
+    "description": "Informs the customer that a new NBN appointment needs to be booked.",
+    "zohoTemplateId": "6064528000037902044",
+    "requiredFields": [
+      "accountID",
+      "firstname",
+      "siteAddress",
+      "nbnAppointmentID",
+      "nbnAppointmentStartTime",
+      "nbnAppointmentEndTime"
+    ]
+  },
+  "Order NBN - Appointment Reschedule Required": {
+    "subjectPattern": "Action required: Book a new NBN appointment",
+    "description": "Requests the customer to reschedule their NBN appointment.",
+    "zohoTemplateId": "6064528000037902044",
+    "requiredFields": [
+      "accountID",
+      "firstname",
+      "siteAddress",
+      "nbnAppointmentID",
+      "nbnAppointmentStartTime",
+      "nbnAppointmentEndTime"
+    ]
+  },
+  "Order - Appointment (NBN) Reminder": {
+    "subjectPattern": "Reminder: Your upcoming NBN appointment",
+    "description": "Reminds the customer of their upcoming NBN appointment.",
+    "zohoTemplateId": "6064528000037902037",
+    "requiredFields": [
+      "accountID",
+      "firstname",
+      "siteAddress",
+      "nbnAppointmentID",
+      "nbnAppointmentStartTime",
+      "nbnAppointmentEndTime"
+    ]
+  },
+  "Order - Appointment (NBN) Cancelled": {
+    "subjectPattern": "Your NBN appointment has been cancelled",
+    "description": "Informs the customer that their scheduled NBN appointment has been cancelled.",
+    "zohoTemplateId": "6064528000037902012",
+    "requiredFields": [
+      "accountID",
+      "firstname",
+      "siteAddress",
+      "nbnAppointmentID",
+      "nbnAppointmentStartTime",
+      "nbnAppointmentEndTime"
+    ]
+  },
+  "Order NBN - Appointment Cancelled": {
+    "subjectPattern": "Your NBN appointment has been cancelled",
+    "description": "Duplicate trigger using the same cancellation template for NBN appointments.",
+    "zohoTemplateId": "6064528000037902012",
+    "requiredFields": [
+      "accountID",
+      "firstname",
+      "siteAddress",
+      "nbnAppointmentID",
+      "nbnAppointmentStartTime",
+      "nbnAppointmentEndTime"
+    ]
+  },
+  "Order (NBN) - On Hold": {
+    "subjectPattern": "Your NBN order is currently on hold",
+    "description": "Advises the customer that their NBN order has been placed on hold.",
+    "zohoTemplateId": "6064528000037799030",
+    "requiredFields": [
+      "accountID",
+      "firstname",
+      "siteAddress",
+      "nbnAppointmentID",
+      "nbnAppointmentStartTime",
+      "nbnAppointmentEndTime"
+    ]
+  },
+  "Order (NBN) - Cancelled": {
+    "subjectPattern": "Your NBN order has been cancelled",
+    "description": "Confirms that the NBN order has been cancelled and is no longer in progress.",
+    "zohoTemplateId": "6064528000037799019",
+    "requiredFields": [
+      "accountID",
+      "firstname"
+    ]
+  },
+  "Order NBN Activation - Cancelled": {
+    "subjectPattern": "Your NBN order has been cancelled",
+    "description": "Duplicate trigger using the same cancellation template for NBN activations.",
+    "zohoTemplateId": "6064528000037799019",
+    "requiredFields": [
+      "accountID",
+      "firstname"
+    ]
+  },
+  "Order (NBN) - Rejected": {
+    "subjectPattern": "Your NBN order could not be processed",
+    "description": "Informs the customer that their NBN order could not be processed successfully.",
+    "zohoTemplateId": "6064528000037799059",
+    "requiredFields": [
+      "accountID",
+      "firstname"
+    ]
+  },
+  "Order NBN Activation - Rejected": {
+    "subjectPattern": "Your NBN order could not be processed",
+    "description": "Duplicate trigger using the same rejection template for NBN activations.",
+    "zohoTemplateId": "6064528000037799059",
+    "requiredFields": [
+      "accountID",
+      "firstname"
+    ]
+  },
+  "Order NBN Terminate - Completed": {
+    "subjectPattern": "Your NBN service has been cancelled",
+    "description": "Confirms that the customer's NBN service termination is complete.",
+    "zohoTemplateId": "6064528000037902065",
+    "requiredFields": [
+      "accountID",
+      "firstname"
+    ]
+  },
+  "Order (NBN Plan Change) - Completed": {
+    "subjectPattern": "Your NBN plan change is complete",
+    "description": "Confirms that the customer's NBN plan has been successfully changed.",
+    "zohoTemplateId": "6064528000037902072",
+    "requiredFields": [
+      "accountID",
+      "firstname",
+      "currentplan",
+      "newplan"
+    ]
+  },
+  "Order (NBN Activation) - Completed": {
+    "subjectPattern": "Your NBN service is now active",
+    "description": "Confirms that the NBN service has been activated. Postgres delineator determines Fibre Upgrade or No Fibre Upgrade template.",
+    "zohoTemplateId": {
+      "FibreUpgrade": "6064528000037722734",
+      "NoFibreUpgrade": "6064528000037799037"
     },
-    "Appointment Required": {
-        "description": "Customer needs to schedule an NBN appointment.",
-        "requiredFields": [
-            "address",
-            "booking_link"
-        ],
-        "zohoTemplateId": "EZI_APPT_REQUIRED",
-        "parser": "parseAppointmentRequired"
-    },
-    "NBN Activation Completed": {
-        "description": "Confirms that the NBN service is active and ready to use.",
-        "requiredFields": [
-            "activation_date",
-            "technology_type",
-            "plan_name"
-        ],
-        "zohoTemplateId": "EZI_ACTIVATION_COMPLETED",
-        "parser": "parseActivationCompleted"
-    },
-    "Order On Hold": {
-        "description": "Informs customer that their order has been paused due to a hold reason.",
-        "requiredFields": [
-            "hold_reason",
-            "next_steps"
-        ],
-        "zohoTemplateId": "EZI_ORDER_ON_HOLD",
-        "parser": "parseOrderOnHold"
-    },
-    "Order Rejected": {
-        "description": "Notifies customer that their NBN order was rejected by the wholesaler.",
-        "requiredFields": [
-            "reject_reason",
-            "support_contact"
-        ],
-        "zohoTemplateId": "EZI_ORDER_REJECTED",
-        "parser": "parseOrderRejected"
-    },
-    "Order Completed": {
-        "description": "Confirms the order provisioning process has finished successfully.",
-        "requiredFields": [
-            "completion_date",
-            "plan_name"
-        ],
-        "zohoTemplateId": "EZI_ORDER_COMPLETED",
-        "parser": "parseOrderCompleted"
-    },
-    "Order Cancelled": {
-        "description": "Notifies customer that their order has been cancelled.",
-        "requiredFields": [
-            "cancel_reason",
-            "support_contact"
-        ],
-        "zohoTemplateId": "EZI_ORDER_CANCELLED",
-        "parser": "parseOrderCancelled"
-    },
-    "Change of Ownership Completed": {
-        "description": "Confirms that service ownership has been successfully transferred.",
-        "requiredFields": [
-            "old_name",
-            "new_name",
-            "address"
-        ],
-        "zohoTemplateId": "EZI_CHANGE_OWNERSHIP",
-        "parser": "parseChangeOwnership"
-    },
-    "NBN Port Out Completed": {
-        "description": "Confirms that the customer's number has been successfully ported out.",
-        "requiredFields": [
-            "phone_number",
-            "port_date"
-        ],
-        "zohoTemplateId": "EZI_PORT_OUT",
-        "parser": "parsePortOutCompleted"
-    }
+    "requiredFields": [
+      "accountID",
+      "firstname",
+      "siteAddress"
+    ]
+  },
+  "Order NBN - Appointment Completed Fibre Upgrade": {
+    "subjectPattern": "Your fibre upgrade is complete",
+    "description": "Confirms completion of the customer's NBN fibre upgrade appointment.",
+    "zohoTemplateId": "6064528000037722734",
+    "requiredFields": [
+      "accountID",
+      "firstname",
+      "siteAddress"
+    ]
+  },
+  "Order (NBN) - In Progress": {
+    "subjectPattern": "Your NBN service has been scheduled",
+    "description": "Notifies the customer that their NBN service order has been scheduled and is in progress.",
+    "zohoTemplateId": "6064528000037902001",
+    "requiredFields": [
+      "accountID",
+      "firstname",
+      "siteAddress",
+      "scheduledate"
+    ]
+  },
+  "Order NBN - NTD Installation Required": {
+    "subjectPattern": "An nbn® Appointment is Required",
+    "description": "Advises the customer that an NBN technician appointment is required for installation.",
+    "zohoTemplateId": "6064528000037902019",
+    "requiredFields": [
+      "accountID",
+      "firstname"
+    ]
+  }
 }
